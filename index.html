@@ -10,20 +10,32 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 </head>
 <body>
 
   <!-- Top Header -->
   <header class="site-header">
     <div class="container header-wrapper">
-      <div class="brand">
-  <a href="index.html" class="brand-logo">
-    <img src="logo1.png" alt="Logo Pro Mutu Andalan">
-  </a>
-</div>
 
-      <button class="menu-toggle" id="menuToggle">☰</button>
+      <a href="index.html" class="brand" aria-label="Pro Mutu Andalan">
+        <div class="brand-logo">
+          <img src="logo1.png" alt="Logo Pro Mutu Andalan">
+        </div>
+
+        <div class="brand-text">
+          <h1>Pro Mutu Andalan</h1>
+          <p>Profesional • Mutu • Terpercaya</p>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu navigasi">
+        ☰
+      </button>
+
     </div>
   </header>
 
@@ -292,7 +304,7 @@
     <p>© 2026 - <a href="#">Pro Mutu Andalan</a></p>
   </footer>
 
-  <button class="back-to-top" id="backToTop">↑</button>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas">↑</button>
 
   <script src="script.js"></script>
 </body>
