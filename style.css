@@ -49,7 +49,7 @@ a:hover {
 }
 
 .header-wrapper {
-  min-height: 120px;
+  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -444,7 +444,12 @@ a:hover {
 
 @media (max-width: 720px) {
   .header-wrapper {
-    min-height: 96px;
+    min-height: 88px;
+  }
+
+  .brand-logo img {
+    height: 64px;
+    max-width: 210px;
   }
 
   .menu-toggle {
@@ -476,8 +481,9 @@ a:hover {
   .post-thumb {
     min-height: 210px;
   }
+} 
 
-  .brand a {
+.brand a {
     font-size: 1.8rem;
   }
 
