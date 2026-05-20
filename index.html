@@ -3,327 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pro Mutu Andalan | Konsultan Mutu Pangan</title>
+
+  <title>Pro Mutu Andalan | Informasi Mutu dan Keamanan Pangan</title>
 
   <link rel="stylesheet" href="style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-wrapper">
-      <a href="#" class="logo">
-        <span class="logo-icon">PMA</span>
-        <span>Pro Mutu Andalan</span>
-      </a>
+  <!-- Top Header -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <div class="brand">
+        <a href="index.html">Pro Mutu Andalan</a>
+        <p>Informasi, edukasi, dan pendampingan mutu pangan</p>
+      </div>
 
-      <nav class="nav-menu" id="navMenu">
-        <a href="#home">Beranda</a>
-        <a href="#about">Tentang</a>
-        <a href="#services">Layanan</a>
-        <a href="#process">Proses</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-
-      <a href="#contact" class="btn btn-primary nav-cta">Konsultasi</a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
-        ☰
-      </button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <p class="eyebrow">Konsultan Mutu & Keamanan Pangan</p>
-        <h1>Membangun Sistem Mutu Pangan yang Aman, Terukur, dan Terpercaya.</h1>
-        <p class="hero-desc">
-          Pro Mutu Andalan membantu pelaku usaha pangan menerapkan standar mutu,
-          keamanan pangan, audit internal, pendampingan sertifikasi, dan peningkatan
-          sistem produksi agar lebih profesional dan siap bersaing.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Mulai Konsultasi</a>
-          <a href="#services" class="btn btn-secondary">Lihat Layanan</a>
-        </div>
-
-        <div class="hero-stats">
-          <div>
-            <strong>100+</strong>
-            <span>UMKM & Industri Didampingi</span>
-          </div>
-          <div>
-            <strong>10+</strong>
-            <span>Standar Mutu Pangan</span>
-          </div>
-          <div>
-            <strong>98%</strong>
-            <span>Kepuasan Klien</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="quality-card">
-          <div class="badge">Food Quality System</div>
-          <h3>Solusi Mutu Pangan Terintegrasi</h3>
-          <ul>
-            <li>✓ GMP & SSOP</li>
-            <li>✓ HACCP</li>
-            <li>✓ Audit Internal</li>
-            <li>✓ Pendampingan Sertifikasi</li>
-            <li>✓ Pelatihan Tim Produksi</li>
-          </ul>
-        </div>
-      </div>
+  <!-- Navigation -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container nav-wrapper">
+      <a href="#">Daftar Isi</a>
+      <a href="#">Mutu Pangan</a>
+      <a href="#">Keamanan Pangan</a>
+      <a href="#">Sertifikasi</a>
+      <a href="#">HACCP</a>
+      <a href="#">Kewirausahaan Pangan</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- Partner / Value Strip -->
-  <section class="value-strip">
-    <div class="container value-wrapper">
-      <div>Keamanan Pangan</div>
-      <div>Standar Mutu</div>
-      <div>Sertifikasi</div>
-      <div>Audit Sistem</div>
-      <div>Pelatihan SDM</div>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main class="container main-layout">
 
-  <!-- About -->
-  <section class="section about" id="about">
-    <div class="container about-grid">
-      <div class="about-image">
-        <div class="image-box">
-          <span>Quality Assurance</span>
+    <!-- Content Area -->
+    <section class="content-area">
+
+      <!-- Featured Post -->
+      <section class="featured-post">
+        <h2 class="section-title">Featured Post</h2>
+
+        <article class="featured-card">
+          <div class="post-image featured-image">
+            <span>Mutu Pangan</span>
+          </div>
+
+          <div class="post-content">
+            <h1>
+              <a href="#">
+                Pentingnya Sistem Mutu Pangan untuk Meningkatkan Kepercayaan Konsumen
+              </a>
+            </h1>
+
+            <p>
+              Sistem mutu pangan menjadi fondasi penting bagi pelaku usaha pangan
+              dalam menjaga keamanan produk, konsistensi kualitas, dan kepatuhan
+              terhadap standar yang berlaku.
+            </p>
+
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Latest Posts -->
+      <section class="latest-posts">
+        <h2 class="section-title">Latest Posts</h2>
+
+        <article class="post-card">
+          <div class="category">Keamanan Pangan</div>
+
+          <div class="post-row">
+            <div class="post-thumb thumb-1"></div>
+
+            <div class="post-detail">
+              <h2>
+                <a href="#">
+                  Mengenal GMP sebagai Dasar Penerapan Mutu pada Industri Pangan
+                </a>
+              </h2>
+
+              <p>
+                Good Manufacturing Practices membantu pelaku usaha memastikan proses
+                produksi berjalan higienis, aman, dan sesuai standar mutu pangan.
+              </p>
+
+              <div class="post-meta">
+                By Pro Mutu Andalan · Mei 20, 2026 · Post a Comment
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="category">HACCP</div>
+
+          <div class="post-row">
+            <div class="post-thumb thumb-2"></div>
+
+            <div class="post-detail">
+              <h2>
+                <a href="#">
+                  Apa Itu HACCP dan Mengapa Penting untuk Bisnis Pangan?
+                </a>
+              </h2>
+
+              <p>
+                HACCP digunakan untuk mengidentifikasi bahaya, menentukan titik
+                kendali kritis, dan mencegah risiko keamanan pangan sejak proses awal.
+              </p>
+
+              <div class="post-meta">
+                By Pro Mutu Andalan · Mei 18, 2026 · Post a Comment
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="category">Sertifikasi</div>
+
+          <div class="post-row">
+            <div class="post-thumb thumb-3"></div>
+
+            <div class="post-detail">
+              <h2>
+                <a href="#">
+                  Persiapan Dokumen Mutu Sebelum Mengikuti Audit Sertifikasi
+                </a>
+              </h2>
+
+              <p>
+                Dokumen mutu yang tertata membantu proses audit berjalan lebih lancar
+                dan memudahkan tim dalam menunjukkan bukti penerapan sistem.
+              </p>
+
+              <div class="post-meta">
+                By Pro Mutu Andalan · Mei 15, 2026 · Post a Comment
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="category">Audit Internal</div>
+
+          <div class="post-row">
+            <div class="post-thumb thumb-4"></div>
+
+            <div class="post-detail">
+              <h2>
+                <a href="#">
+                  Langkah Praktis Melakukan Audit Internal pada Usaha Pangan
+                </a>
+              </h2>
+
+              <p>
+                Audit internal membantu menemukan ketidaksesuaian proses, memperbaiki
+                sistem kerja, dan meningkatkan kesiapan sebelum audit eksternal.
+              </p>
+
+              <div class="post-meta">
+                By Pro Mutu Andalan · Mei 12, 2026 · Post a Comment
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="category">Kewirausahaan Pangan</div>
+
+          <div class="post-row">
+            <div class="post-thumb thumb-5"></div>
+
+            <div class="post-detail">
+              <h2>
+                <a href="#">
+                  Mengapa UMKM Pangan Perlu Mulai Menerapkan SOP Produksi?
+                </a>
+              </h2>
+
+              <p>
+                SOP produksi membantu UMKM menjaga konsistensi produk, mengurangi
+                kesalahan kerja, dan meningkatkan kepercayaan pembeli.
+              </p>
+
+              <div class="post-meta">
+                By Pro Mutu Andalan · Mei 10, 2026 · Post a Comment
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="older-posts">
+          <a href="#">Older Posts</a>
         </div>
-      </div>
+      </section>
+    </section>
 
-      <div class="section-content">
-        <p class="section-label">Tentang Kami</p>
-        <h2>Partner Strategis untuk Mutu dan Keamanan Produk Pangan Anda.</h2>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <section class="widget">
+        <h3 class="widget-title">Postingan Populer</h3>
+
+        <div class="popular-post">
+          <div class="popular-thumb pop-1"></div>
+          <div>
+            <h4><a href="#">Checklist Dasar Audit Mutu Pangan untuk UMKM</a></h4>
+            <p>Audit mutu pangan membantu usaha memastikan proses...</p>
+          </div>
+        </div>
+
+        <div class="popular-post">
+          <div class="popular-thumb pop-2"></div>
+          <div>
+            <h4><a href="#">Perbedaan GMP, SSOP, dan HACCP</a></h4>
+            <p>Ketiga sistem ini sering digunakan dalam industri pangan...</p>
+          </div>
+        </div>
+
+        <div class="popular-post">
+          <div class="popular-thumb pop-3"></div>
+          <div>
+            <h4><a href="#">Cara Menyusun SOP Produksi Pangan</a></h4>
+            <p>SOP yang baik harus mudah dipahami dan diterapkan...</p>
+          </div>
+        </div>
+
+        <div class="popular-post">
+          <div class="popular-thumb pop-4"></div>
+          <div>
+            <h4><a href="#">Manfaat Pelatihan Keamanan Pangan</a></h4>
+            <p>Pelatihan membantu tim memahami risiko kontaminasi...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="widget">
+        <h3 class="widget-title">Kategori</h3>
+
+        <ul class="category-list">
+          <li><a href="#">Mutu Pangan</a></li>
+          <li><a href="#">Keamanan Pangan</a></li>
+          <li><a href="#">Sertifikasi</a></li>
+          <li><a href="#">HACCP</a></li>
+          <li><a href="#">GMP & SSOP</a></li>
+          <li><a href="#">Audit Internal</a></li>
+        </ul>
+      </section>
+
+      <section class="widget contact-widget">
+        <h3 class="widget-title">Konsultasi Mutu</h3>
         <p>
-          Pro Mutu Andalan hadir untuk membantu bisnis pangan membangun sistem mutu
-          yang sesuai dengan standar, mudah dijalankan oleh tim, serta mendukung
-          kepercayaan konsumen dan mitra bisnis.
+          Butuh pendampingan sistem mutu pangan, penyusunan SOP, audit internal,
+          atau persiapan sertifikasi?
         </p>
-        <p>
-          Kami memahami bahwa mutu pangan bukan hanya soal dokumen, tetapi juga
-          budaya kerja, konsistensi proses, higienitas, dan kepatuhan terhadap standar.
-        </p>
+        <a href="#" class="contact-button">Hubungi Kami</a>
+      </section>
 
-        <div class="about-points">
-          <div>
-            <h4>Pendekatan Praktis</h4>
-            <p>Solusi disesuaikan dengan kebutuhan dan skala usaha.</p>
-          </div>
-          <div>
-            <h4>Berbasis Standar</h4>
-            <p>Mengacu pada prinsip mutu, keamanan pangan, dan kepatuhan regulasi.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </aside>
+  </main>
 
-  <!-- Services -->
-  <section class="section services" id="services">
+  <!-- Static Pages Menu -->
+  <section class="static-menu">
     <div class="container">
-      <div class="section-header">
-        <p class="section-label">Layanan Kami</p>
-        <h2>Layanan Profesional untuk Meningkatkan Mutu Pangan</h2>
-        <p>
-          Kami membantu dari tahap identifikasi masalah, penyusunan dokumen,
-          pelatihan, implementasi, hingga evaluasi sistem mutu.
-        </p>
-      </div>
+      <h3>Menu Halaman Statis</h3>
 
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="icon">🧾</div>
-          <h3>Penyusunan Dokumen Mutu</h3>
-          <p>
-            Penyusunan SOP, instruksi kerja, formulir kontrol, dan dokumen sistem mutu
-            sesuai kebutuhan usaha pangan.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="icon">🧪</div>
-          <h3>GMP, SSOP & HACCP</h3>
-          <p>
-            Pendampingan penerapan Good Manufacturing Practices, sanitasi, serta
-            analisis bahaya dan titik kendali kritis.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="icon">🔍</div>
-          <h3>Audit Internal</h3>
-          <p>
-            Evaluasi kesesuaian proses produksi, higienitas, pencatatan, dan kesiapan
-            sistem mutu sebelum audit eksternal.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="icon">🎓</div>
-          <h3>Pelatihan Mutu Pangan</h3>
-          <p>
-            Pelatihan praktis untuk tim produksi, quality control, dan manajemen agar
-            sistem mutu berjalan konsisten.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="icon">🏅</div>
-          <h3>Pendampingan Sertifikasi</h3>
-          <p>
-            Membantu persiapan dokumen, implementasi, dan perbaikan temuan untuk
-            kebutuhan sertifikasi mutu pangan.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="icon">📊</div>
-          <h3>Evaluasi Sistem Produksi</h3>
-          <p>
-            Analisis alur produksi, potensi risiko kontaminasi, efisiensi proses,
-            dan rekomendasi perbaikan.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section process" id="process">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Alur Kerja</p>
-        <h2>Proses Pendampingan yang Jelas dan Terarah</h2>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-step">
-          <span>01</span>
-          <h3>Konsultasi Awal</h3>
-          <p>Kami memahami kondisi usaha, kebutuhan mutu, dan target yang ingin dicapai.</p>
-        </div>
-
-        <div class="process-step">
-          <span>02</span>
-          <h3>Assessment Sistem</h3>
-          <p>Melakukan identifikasi gap terhadap proses, dokumen, fasilitas, dan SDM.</p>
-        </div>
-
-        <div class="process-step">
-          <span>03</span>
-          <h3>Implementasi</h3>
-          <p>Menyusun dokumen, pelatihan tim, dan mendampingi penerapan sistem mutu.</p>
-        </div>
-
-        <div class="process-step">
-          <span>04</span>
-          <h3>Evaluasi & Perbaikan</h3>
-          <p>Mengevaluasi hasil penerapan dan memberikan rekomendasi peningkatan berkelanjutan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container cta-box">
-      <div>
-        <p class="section-label">Siap Tingkatkan Mutu Produk?</p>
-        <h2>Konsultasikan kebutuhan sistem mutu pangan Anda bersama Pro Mutu Andalan.</h2>
-      </div>
-      <a href="#contact" class="btn btn-light">Hubungi Kami</a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container contact-grid">
-      <div class="section-content">
-        <p class="section-label">Kontak</p>
-        <h2>Mari Bangun Sistem Mutu Pangan yang Lebih Baik.</h2>
-        <p>
-          Isi formulir berikut untuk konsultasi awal. Tim Pro Mutu Andalan akan membantu
-          memberikan arahan sesuai kebutuhan bisnis pangan Anda.
-        </p>
-
-        <div class="contact-info">
-          <p><strong>Email:</strong> promutuandalan@email.com</p>
-          <p><strong>WhatsApp:</strong> +62 812-3456-7890</p>
-          <p><strong>Lokasi:</strong> Indonesia</p>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="name">Nama</label>
-          <input type="text" id="name" placeholder="Nama Anda" required />
-        </div>
-
-        <div class="form-group">
-          <label for="business">Nama Usaha</label>
-          <input type="text" id="business" placeholder="Nama usaha/perusahaan" required />
-        </div>
-
-        <div class="form-group">
-          <label for="service">Kebutuhan Layanan</label>
-          <select id="service" required>
-            <option value="">Pilih layanan</option>
-            <option>Penyusunan Dokumen Mutu</option>
-            <option>GMP, SSOP & HACCP</option>
-            <option>Audit Internal</option>
-            <option>Pelatihan Mutu Pangan</option>
-            <option>Pendampingan Sertifikasi</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Pesan</label>
-          <textarea id="message" rows="5" placeholder="Ceritakan kebutuhan Anda" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary full-width">
-          Kirim Pesan
-        </button>
-
-        <p class="form-note" id="formNote"></p>
-      </form>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-wrapper">
-      <div>
-        <h3>Pro Mutu Andalan</h3>
-        <p>Konsultan mutu dan keamanan pangan untuk bisnis yang lebih terpercaya.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#home">Beranda</a>
-        <a href="#about">Tentang</a>
-        <a href="#services">Layanan</a>
-        <a href="#contact">Kontak</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 Pro Mutu Andalan. All rights reserved.</p>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 - <a href="#">Pro Mutu Andalan</a></p>
   </footer>
 
   <button class="back-to-top" id="backToTop">↑</button>
