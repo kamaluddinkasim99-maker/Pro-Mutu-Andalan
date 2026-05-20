@@ -2,12 +2,14 @@
   --primary: #17845b;
   --primary-dark: #0f5c3f;
   --accent: #f4a51c;
+  --orange: #f97316;
   --text: #333333;
   --muted: #777777;
   --light: #f7f7f7;
   --border: #e4e4e4;
   --white: #ffffff;
   --dark: #202020;
+  --black: #111111;
 }
 
 * {
@@ -49,32 +51,70 @@ a:hover {
 }
 
 .header-wrapper {
-  min-height: 110px;
+  min-height: 128px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.brand:hover {
+  color: inherit;
 }
 
 .brand-logo {
+  flex: 0 0 auto;
+  width: 92px;
+  height: 92px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .brand-logo img {
-  width: auto;
-  height: 86px;
-  max-width: 260px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
   display: block;
 }
 
+.brand-text {
+  min-width: 0;
+}
+
+.brand-text h1 {
+  font-family: "Merriweather", serif;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1.6px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.brand-text h1::first-letter {
+  color: var(--black);
+}
+
+.brand-text p {
+  margin-top: 8px;
+  color: var(--orange);
+  font-size: clamp(0.82rem, 1.4vw, 1.02rem);
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
 .menu-toggle {
   display: none;
+  flex: 0 0 auto;
   border: none;
   background: var(--primary);
   color: var(--white);
@@ -440,16 +480,36 @@ a:hover {
   .sidebar {
     order: 2;
   }
+
+  .brand-text h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
 }
 
 @media (max-width: 720px) {
   .header-wrapper {
-    min-height: 88px;
+    min-height: 92px;
   }
 
+  .brand {
+    gap: 12px;
+  }
+
+  .brand-logo,
   .brand-logo img {
+    width: 64px;
     height: 64px;
-    max-width: 210px;
+  }
+
+  .brand-text h1 {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    letter-spacing: -0.8px;
+  }
+
+  .brand-text p {
+    margin-top: 4px;
+    font-size: 0.68rem;
+    letter-spacing: 2px;
   }
 
   .menu-toggle {
@@ -481,13 +541,35 @@ a:hover {
   .post-thumb {
     min-height: 210px;
   }
-} 
+}
 
-.brand a {
-    font-size: 1.8rem;
+@media (max-width: 480px) {
+  .header-wrapper {
+    gap: 12px;
   }
 
-  .brand p {
-    font-size: 0.85rem;
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo,
+  .brand-logo img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.25rem;
+    line-height: 1.08;
+  }
+
+  .brand-text p {
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
+  }
+
+  .menu-toggle {
+    padding: 7px 10px;
+    font-size: 1.1rem;
   }
 }
