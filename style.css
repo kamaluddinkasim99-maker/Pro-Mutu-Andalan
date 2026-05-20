@@ -55,18 +55,22 @@ a:hover {
   justify-content: space-between;
 }
 
-.brand a {
-  font-family: "Merriweather", serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 900;
-  color: var(--dark);
-  letter-spacing: -1px;
+.brand {
+  display: flex;
+  align-items: center;
 }
 
-.brand p {
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 0.95rem;
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  width: auto;
+  height: 86px;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
 }
 
 .menu-toggle {
