@@ -325,8 +325,8 @@ a:hover {
 /* Foto artikel GMP */
 .thumb-1 {
   background-image:
-    linear-gradient(rgba(23, 132, 91, 0.12), rgba(23, 132, 91, 0.32)),
-    url("https://images.unsplash.com/photo-1581093458791-9d42ccdb7a5d?auto=format&fit=crop&w=800&q=80");
+    linear-gradient(rgba(23, 132, 91, 0.10), rgba(23, 132, 91, 0.28)),
+    url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80");
 }
 
 .thumb-2 {
@@ -534,8 +534,8 @@ a:hover {
 
 .article-img-gmp {
   background-image:
-    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
-    url("https://images.unsplash.com/photo-1581093458791-9d42ccdb7a5d?auto=format&fit=crop&w=1200&q=80");
+    linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.48)),
+    url("https://images.unsplash.com/photo-1581092162384-8987c1d64718?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
 }
 
 .article-img-sop {
