@@ -1,7 +1,9 @@
 :root {
   --primary: #17845b;
   --primary-dark: #0f5c3f;
-  --accent: #f4a51c;
+  --accent: #d4af37;
+  --gold-light: #ffe08a;
+  --gold-dark: #9b6b12;
   --orange: #f97316;
   --text: #333333;
   --muted: #777777;
@@ -10,6 +12,30 @@
   --white: #ffffff;
   --dark: #202020;
   --black: #111111;
+  --body-bg: #f2f4f3;
+  --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --footer-bg: #1f1f1f;
+}
+
+body.dark-mode {
+  --primary: #22c55e;
+  --primary-dark: #16a34a;
+  --accent: #f6c453;
+  --gold-light: #ffe9a8;
+  --gold-dark: #b88316;
+  --orange: #fb923c;
+  --text: #e5e7eb;
+  --muted: #a1a1aa;
+  --light: #1f2937;
+  --border: #374151;
+  --white: #111827;
+  --dark: #f8fafc;
+  --black: #f9fafb;
+  --body-bg: #0f172a;
+  --card-bg: #111827;
+  --header-bg: #0b1120;
+  --footer-bg: #020617;
 }
 
 * {
@@ -23,10 +49,11 @@ html {
 }
 
 body {
-  background: #f2f4f3;
+  background: var(--body-bg);
   color: var(--text);
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -45,9 +72,10 @@ a:hover {
 
 /* Header */
 .site-header {
-  background: var(--white);
-  border-top: 5px solid var(--primary);
+  background: var(--header-bg);
+  border-top: 5px solid var(--accent);
   border-bottom: 1px solid var(--border);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .header-wrapper {
@@ -90,43 +118,64 @@ a:hover {
 }
 
 .brand-text h1 {
-  font-family: "Merriweather", serif;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3.45rem);
   font-weight: 900;
   line-height: 1.05;
-  letter-spacing: -1.6px;
-  color: var(--black);
+  letter-spacing: -0.8px;
+  color: var(--accent);
   text-transform: uppercase;
-}
-
-.brand-text h1::first-letter {
-  color: var(--black);
+  text-shadow: 0 2px 8px rgba(155, 107, 18, 0.16);
 }
 
 .brand-text p {
   margin-top: 8px;
   color: var(--orange);
-  font-size: clamp(0.82rem, 1.4vw, 1.02rem);
+  font-size: clamp(0.78rem, 1.15vw, 0.96rem);
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.theme-toggle,
+.menu-toggle {
+  border: none;
+  color: var(--white);
+  background: var(--primary);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.05rem;
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+  background: var(--primary-dark);
 }
 
 .menu-toggle {
   display: none;
-  flex: 0 0 auto;
-  border: none;
-  background: var(--primary);
-  color: var(--white);
   padding: 8px 13px;
   font-size: 1.3rem;
-  cursor: pointer;
 }
 
 /* Navigation */
 .main-nav {
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
+  transition: background 0.3s ease;
 }
 
 .nav-wrapper {
@@ -140,14 +189,14 @@ a:hover {
   display: block;
   padding: 15px 18px;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nav-wrapper a:hover {
   background: var(--primary-dark);
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Layout */
@@ -182,17 +231,18 @@ a:hover {
   bottom: -2px;
   width: 90px;
   height: 2px;
-  background: var(--primary);
+  background: var(--accent);
 }
 
-/* Featured Post */
+/* Cards */
 .featured-post,
 .latest-posts,
 .widget {
-  background: var(--white);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 24px;
   margin-bottom: 28px;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .featured-card {
@@ -216,14 +266,14 @@ a:hover {
   left: 18px;
   bottom: 18px;
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   padding: 6px 12px;
   font-size: 0.82rem;
   font-weight: 700;
 }
 
 .featured-card h1 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", Georgia, serif;
   color: var(--dark);
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   line-height: 1.25;
@@ -253,7 +303,7 @@ a:hover {
 .category {
   display: inline-block;
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   padding: 5px 11px;
   font-size: 0.78rem;
   font-weight: 700;
@@ -272,8 +322,11 @@ a:hover {
   background-position: center;
 }
 
+/* Foto artikel GMP */
 .thumb-1 {
-  background-image: url("https://images.unsplash.com/photo-1581093458791-9d42ccdb7a5d?auto=format&fit=crop&w=600&q=80");
+  background-image:
+    linear-gradient(rgba(23, 132, 91, 0.12), rgba(23, 132, 91, 0.32)),
+    url("https://images.unsplash.com/photo-1581093458791-9d42ccdb7a5d?auto=format&fit=crop&w=800&q=80");
 }
 
 .thumb-2 {
@@ -293,7 +346,7 @@ a:hover {
 }
 
 .post-detail h2 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", Georgia, serif;
   color: var(--dark);
   font-size: 1.45rem;
   line-height: 1.35;
@@ -307,7 +360,7 @@ a:hover {
 
 .post-meta {
   font-size: 0.84rem;
-  color: #999999;
+  color: var(--muted);
 }
 
 /* Older posts */
@@ -318,14 +371,14 @@ a:hover {
 .older-posts a {
   display: inline-block;
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   padding: 9px 16px;
   font-weight: 700;
 }
 
 .older-posts a:hover {
   background: var(--primary-dark);
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Sidebar */
@@ -404,21 +457,22 @@ a:hover {
 .contact-button {
   display: inline-block;
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   padding: 10px 16px;
   font-weight: 700;
 }
 
 .contact-button:hover {
   background: var(--primary-dark);
-  color: var(--white);
+  color: #ffffff;
 }
 
 /* Static Menu */
 .static-menu {
-  background: var(--white);
+  background: var(--card-bg);
   border-top: 1px solid var(--border);
   padding: 32px 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .static-menu h3 {
@@ -440,15 +494,16 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  background: #1f1f1f;
+  background: var(--footer-bg);
   color: #dddddd;
   text-align: center;
   padding: 24px;
   font-size: 0.92rem;
+  transition: background 0.3s ease;
 }
 
 .site-footer a {
-  color: var(--white);
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -461,7 +516,7 @@ a:hover {
   height: 43px;
   border: none;
   background: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   font-size: 1.2rem;
   cursor: pointer;
   display: none;
@@ -488,7 +543,7 @@ a:hover {
 
 @media (max-width: 720px) {
   .header-wrapper {
-    min-height: 92px;
+    min-height: 96px;
   }
 
   .brand {
@@ -502,14 +557,14 @@ a:hover {
   }
 
   .brand-text h1 {
-    font-size: clamp(1.35rem, 6vw, 2rem);
-    letter-spacing: -0.8px;
+    font-size: clamp(1.25rem, 5.8vw, 1.85rem);
+    letter-spacing: -0.4px;
   }
 
   .brand-text p {
     margin-top: 4px;
-    font-size: 0.68rem;
-    letter-spacing: 2px;
+    font-size: 0.62rem;
+    letter-spacing: 1.8px;
   }
 
   .menu-toggle {
@@ -545,7 +600,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .header-wrapper {
-    gap: 12px;
+    gap: 10px;
   }
 
   .brand {
@@ -559,13 +614,19 @@ a:hover {
   }
 
   .brand-text h1 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.08;
   }
 
   .brand-text p {
-    font-size: 0.58rem;
-    letter-spacing: 1.5px;
+    font-size: 0.52rem;
+    letter-spacing: 1.1px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
   }
 
   .menu-toggle {
