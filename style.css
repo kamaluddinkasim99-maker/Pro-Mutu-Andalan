@@ -381,6 +381,198 @@ a:hover {
   color: #ffffff;
 }
 
+/* MBG Snapshot */
+.mbg-snapshot {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.mbg-snapshot-image {
+  min-height: 250px;
+  background:
+    linear-gradient(rgba(15, 92, 63, 0.25), rgba(15, 92, 63, 0.68)),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mbg-snapshot-image span {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: var(--accent);
+  color: #111111;
+  padding: 7px 13px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.mbg-snapshot-content {
+  padding: 24px;
+}
+
+.mbg-snapshot-content h2 {
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--dark);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.32;
+  margin-bottom: 12px;
+}
+
+.mbg-snapshot-content p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+/* Article Detail Page */
+.article-page {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 34px;
+  margin-bottom: 28px;
+}
+
+.article-hero-image {
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.article-hero-image span {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: var(--accent);
+  color: #111111;
+  padding: 8px 14px;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.article-page h1 {
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--dark);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.article-page h2 {
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--dark);
+  font-size: 1.55rem;
+  margin: 30px 0 12px;
+}
+
+.article-page p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.article-page ul,
+.article-page ol {
+  margin: 12px 0 20px 22px;
+}
+
+.article-page li {
+  margin-bottom: 10px;
+}
+
+.article-cta {
+  margin-top: 32px;
+  padding: 24px;
+  background: rgba(212, 175, 55, 0.12);
+  border-left: 5px solid var(--accent);
+}
+
+.article-cta h3 {
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.article-nav a {
+  display: inline-block;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+.article-nav a:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+/* Article Image Variants */
+.article-img-audit {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80");
+}
+
+.article-img-gmp {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1581093458791-9d42ccdb7a5d?auto=format&fit=crop&w=1200&q=80");
+}
+
+.article-img-sop {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80");
+}
+
+.article-img-training {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80");
+}
+
+.article-img-mbg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80");
+}
+
+@media (max-width: 720px) {
+  .mbg-snapshot {
+    grid-template-columns: 1fr;
+  }
+
+  .mbg-snapshot-image {
+    min-height: 220px;
+  }
+
+  .article-page {
+    padding: 24px;
+  }
+
+  .article-hero-image {
+    min-height: 240px;
+  }
+}
 /* Sidebar */
 .popular-post {
   display: grid;
