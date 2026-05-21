@@ -826,3 +826,207 @@ a:hover {
     font-size: 1.1rem;
   }
 }
+/* Interaction Section */
+.interaction-section,
+.article-interaction {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 28px;
+  margin: 28px 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.interaction-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 24px;
+}
+
+.comment-form,
+.contact-box {
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+.comment-form h3,
+.contact-box h3,
+.comment-list h3,
+.article-interaction h2 {
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.comment-form p,
+.contact-box p,
+.article-interaction p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 12px 14px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+}
+
+.submit-button,
+.whatsapp-button,
+.email-button {
+  display: inline-block;
+  border: none;
+  padding: 11px 16px;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.92rem;
+}
+
+.submit-button {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.submit-button:hover {
+  background: var(--primary-dark);
+}
+
+.whatsapp-button {
+  background: #25d366;
+  color: #ffffff;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  color: #ffffff;
+}
+
+.email-button {
+  background: var(--accent);
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.email-button:hover {
+  background: var(--gold-dark);
+  color: #ffffff;
+}
+
+.contact-detail {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-detail p {
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.form-note {
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.comment-list {
+  margin-top: 24px;
+  padding: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+.empty-comment {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.comment-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-item strong {
+  display: block;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.comment-item small {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.comment-item p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.article-contact-actions {
+  margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.email-small-button {
+  margin-top: 10px;
+  background: var(--accent);
+  color: #111111;
+}
+
+.email-small-button:hover {
+  background: var(--gold-dark);
+  color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .interaction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-form,
+  .contact-box,
+  .interaction-section,
+  .article-interaction {
+    padding: 20px;
+  }
+
+  .submit-button,
+  .whatsapp-button,
+  .email-button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
