@@ -1,6 +1,7 @@
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 const backToTop = document.getElementById("backToTop");
+const themeToggle = document.getElementById("themeToggle");
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -8,6 +9,24 @@ if (menuToggle && mainNav) {
 
     const isOpen = mainNav.classList.contains("active");
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "☀️";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    const isDark = document.body.classList.contains("dark-mode");
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
   });
 }
 
