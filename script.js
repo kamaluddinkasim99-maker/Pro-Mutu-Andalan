@@ -46,3 +46,98 @@ if (backToTop) {
     });
   });
 }
+
+/* Main page comment form */
+const commentForm = document.getElementById("commentForm");
+const commentList = document.getElementById("commentList");
+const commentNote = document.getElementById("commentNote");
+
+if (commentForm && commentList) {
+  commentForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("commentName").value.trim();
+    const email = document.getElementById("commentEmail").value.trim();
+    const message = document.getElementById("commentMessage").value.trim();
+
+    if (!name || !email || !message) {
+      if (commentNote) {
+        commentNote.textContent = "Mohon lengkapi nama, email, dan komentar.";
+        commentNote.style.color = "#dc2626";
+      }
+      return;
+    }
+
+    addComment(commentList, name, email, message);
+
+    if (commentNote) {
+      commentNote.textContent = "Komentar berhasil ditampilkan sementara di halaman ini.";
+      commentNote.style.color = "#17845b";
+    }
+
+    commentForm.reset();
+  });
+}
+
+/* Article comment forms */
+const articleForms = document.querySelectorAll(".article-comment-form");
+
+articleForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const wrapper = form.closest(".article-interaction");
+    const list = wrapper.querySelector(".article-comment-list");
+    const note = form.querySelector(".form-note");
+
+    const name = form.querySelector(".comment-name").value.trim();
+    const email = form.querySelector(".comment-email").value.trim();
+    const message = form.querySelector(".comment-message").value.trim();
+
+    if (!name || !email || !message) {
+      note.textContent = "Mohon lengkapi nama, email, dan komentar.";
+      note.style.color = "#dc2626";
+      return;
+    }
+
+    addComment(list, name, email, message);
+
+    note.textContent = "Komentar berhasil ditampilkan sementara di halaman ini.";
+    note.style.color = "#17845b";
+
+    form.reset();
+  });
+});
+
+function addComment(list, name, email, message) {
+  const emptyComment = list.querySelector(".empty-comment");
+
+  if (emptyComment) {
+    emptyComment.remove();
+  }
+
+  const commentItem = document.createElement("div");
+  commentItem.className = "comment-item";
+
+  const date = new Date().toLocaleString("id-ID", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  });
+
+  commentItem.innerHTML = `
+    <strong>${escapeHTML(name)}</strong>
+    <small>${escapeHTML(email)} • ${date}</small>
+    <p>${escapeHTML(message)}</p>
+  `;
+
+  list.appendChild(commentItem);
+}
+
+function escapeHTML(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
